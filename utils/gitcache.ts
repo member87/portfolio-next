@@ -7,7 +7,6 @@ export default class GitCache {
     if (cacheResp)
       return cacheResp;
 
-
     const resp: Response = await fetch(url);
     const str = await resp.clone().json();
     cache.put(url, str, 43200);
