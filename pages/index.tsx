@@ -73,10 +73,10 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background">
-          <div className="py-10 px-10 w-full mx-auto">
+          <div className="py-10 px-10 w-full mx-auto lg:w-4/5">
             <h3 className="text-2xl">GitHub Projects</h3>
             <h4>A few examples of my opensource github projects</h4>
-            <div className="grid grid-cols-1 my-10 gap-5 md:grid-cols-3">
+            <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
               <HomeGitCard project="cam-finder" />
               <HomeGitCard project="cam-finder-web" />
               <HomeGitCard project="dotfiles" />
