@@ -18,22 +18,21 @@ const Home: NextPage = () => {
 
       <main className="text-white">
         <div className="h-screen flex bg-background justify-center items-center">
-          <div className="w-1/2 h-1/2 flex flex-col justify-center borders">
-            <div className="corners">
-              <div className="text-accent text-xl">Hello, my name is</div>
-              <hr className="border-dashed border-2 border-zinc-700 my-6" />
-              <h1 className="text-6xl font-black">Jack</h1>
-              <div className="text-2xl my-4">
-                <Typewriter
-                  options={{
-                    strings: ['Software developer', 'Information security', 'Full stack web dev'],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
+          <div className="w-screen m-5 h-1/2 flex flex-col justify-center md:w-1/2">
+            <div className="text-accent text-xl">Hello, my name is</div>
+            <hr className="border-dashed border-2 border-zinc-700 my-6" />
+            <h1 className="text-6xl font-black">Jack</h1>
+            <div className="text-2xl my-4">
+              <Typewriter
+                options={{
+                  strings: ['Software developer', 'Information security', 'Full stack web dev'],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            </div>
 
-
+            <div>
               <Link href="/">
                 <button className="mt-6 mr-2 inline-block py-3 px-4 border-4 border-accent bg-accent rounded shadow w-fit font-bold">
                   GitHub Projects
@@ -45,7 +44,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background-secondary">
-          <div className="grid grid-cols-2 w-4/5 mx-auto py-40 space-x-20" id="aboutme">
+          <div className="grid grid-cols-1 w-full px-4 mx-auto py-10 lg:grid-cols-2 lg:space-x-20 lg:px-40" id="aboutme">
             <HomeCard title="About me">
               Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
             </HomeCard>
@@ -74,10 +73,10 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background">
-          <div className="py-10 w-4/5 mx-auto">
+          <div className="py-10 px-10 w-full mx-auto">
             <h3 className="text-2xl">GitHub Projects</h3>
             <h4>A few examples of my opensource github projects</h4>
-            <div className="grid grid-cols-3 my-10 gap-5">
+            <div className="grid grid-cols-1 my-10 gap-5 md:grid-cols-3">
               <HomeGitCard project="cam-finder" />
               <HomeGitCard project="cam-finder-web" />
               <HomeGitCard project="dotfiles" />
