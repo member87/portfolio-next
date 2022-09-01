@@ -16,7 +16,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
     super(props)
     this.state = {
       description: "Loading...",
-      stars: 0
+      stars: 0,
+      forks: 0
     }
   }
 

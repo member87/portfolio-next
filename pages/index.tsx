@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import HomeCard from '../components/HomeCard';
 import Badge from '../components/Badge';
 import HomeGitCard from '../components/HomeGitCard';
+import Link from 'next/link'
 
 const Home: NextPage = () => {
 
@@ -32,7 +33,12 @@ const Home: NextPage = () => {
                 />
               </div>
 
-              <a href="/" className="mt-6 mr-2 inline-block py-3 px-4 border-4 border-accent bg-accent rounded shadow w-fit font-bold">GitHub Projects</a>
+
+              <Link href="/">
+                <button className="mt-6 mr-2 inline-block py-3 px-4 border-4 border-accent bg-accent rounded shadow w-fit font-bold">
+                  GitHub Projects
+                </button>
+              </Link>
               <a href="#aboutme" className="mt-6 inline-block py-3 px-4 border-4 border-accent rounded shadow w-fit font-bold">About me</a>
             </div>
           </div>
@@ -76,7 +82,12 @@ const Home: NextPage = () => {
               <HomeGitCard project="cam-finder-web" />
               <HomeGitCard project="dotfiles" />
             </div>
-            <a href="/" className="mx-auto w-fit block border-2 px-8 py-3 border-accent">View more</a>
+            <Link href="/">
+              <button className="mx-auto w-fit block border-2 px-8 py-3 border-accent">
+                GitHub Projects
+              </button>
+            </Link>
+
           </div>
         </div>
       </main>
