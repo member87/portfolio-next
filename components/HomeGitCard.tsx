@@ -8,6 +8,7 @@ type HomeGitState = {
   description: string,
   stars: number,
   forks: number,
+  language: string,
 }
 
 
@@ -17,7 +18,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
     this.state = {
       description: "Loading...",
       stars: 0,
-      forks: 0
+      forks: 0,
+      language: ""
     }
   }
 
@@ -33,7 +35,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
         this.setState({
           description: json.description,
           stars: json.stargazers_count,
-          forks: json.forks_count
+          forks: json.forks_count,
+          language: json.language
         })
       })
   }
@@ -41,8 +44,11 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
   render() {
     return (
       <div className="bg-background-secondary p-5 flex flex-col">
-        <h4 className="text-xl">{this.props.project}</h4>
-        <p className="text-paragraph flex-auto pb-4">{this.state.description}</p>
+        <div className="flex">
+          <h4 className="text-xl flex-auto">{this.props.project}</h4>
+          <span className="text-paragraph text-sm bg-background rounded-full px-3 pt-1">{this.state.language}</span>
+        </div>
+        <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
 
         <div className="grid grid-cols-2">
           <span>
