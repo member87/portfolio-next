@@ -1,26 +1,37 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+@import "@fortawesome/fontawesome-free/css/all.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.corners {
+  background-color: inherit;
+  position: relative;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.corners::before,
+.corners::after {
+  --spacing: -6em;
+  --size: 4px;
+  height: 50%;
+  aspect-ratio: 1 / 1;
+  content: '';
+  position: absolute;
+  border: var(--size) solid theme('colors.accent');
+  border-radius: 1em 0 1em 0;
 }
 
-* {
-  box-sizing: border-box;
+.corners::before {
+  left: var(--spacing);
+  top: var(--spacing);
+  border-width: var(--size) 0 0 var(--size);
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+
+.corners::after {
+  right: var(--spacing);
+  bottom: var(--spacing);
+  border-width: 0 var(--size) var(--size) 0;
 }
