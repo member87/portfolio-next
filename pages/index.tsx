@@ -19,13 +19,12 @@ const Home: NextPage = () => {
       <main className="text-white">
         <div className="h-screen flex bg-background justify-center items-center background-pattern">
           <div className="w-screen m-5 h-1/2 flex flex-col justify-center md:w-1/2">
-            <div className="text-accent text-xl">Hello, my name is</div>
-            <hr className="border-dashed border-2 border-zinc-700 my-6" />
+            <div className="text-accent text-xl mb-8">Hello, my name is</div>
             <h1 className="text-6xl font-black">Jack</h1>
-            <div className="text-2xl my-4">
+            <div className="text-xl my-4">
               <Typewriter
                 options={{
-                  strings: ['Software developer', 'Information security', 'Full stack web dev'],
+                  strings: ['Software developer', 'Information Security', 'Full stack web developer'],
                   autoStart: true,
                   loop: true,
                 }}
@@ -34,11 +33,11 @@ const Home: NextPage = () => {
 
             <div>
               <Link href="/">
-                <button className="mt-6 mr-2 inline-block py-3 px-4 border-4 border-accent bg-accent rounded shadow w-fit font-bold">
+                <button className="mt-6 mr-2 inline-block py-3 px-4 border-2 border-accent bg-accent rounded shadow w-fit">
                   GitHub Projects
                 </button>
               </Link>
-              <a href="#aboutme" className="mt-6 inline-block py-3 px-4 border-4 border-accent rounded shadow w-fit font-bold">About me</a>
+              <a href="#aboutme" className="mt-6 inline-block py-3 px-4 border-2 border-accent rounded shadow w-fit">About me</a>
             </div>
           </div>
         </div>
