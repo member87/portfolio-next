@@ -34,9 +34,9 @@ const Home: NextPage = () => {
 
           </div>
 
-            <div class="items-center flex flex-col text-paragraph tracking-widest">
-              <span class="py-2">scroll</span>
-              <i class="fa-solid fa-chevron-down"></i>
+            <div className="items-center flex flex-col text-paragraph tracking-widest">
+              <span className="py-2">scroll</span>
+              <i className="fa-solid fa-chevron-down"></i>
             </div>
         </div>
 
