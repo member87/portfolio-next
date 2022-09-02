@@ -44,8 +44,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
   render() {
     return (
       <div className="bg-background-secondary p-5 flex flex-col">
-        <div className="flex">
-          <h4 className="text-xl flex-auto">{this.props.project}</h4>
+        <div className="flex flex-wrap">
+          <h4 className="text-xl flex-auto mb-1">{this.props.project}</h4>
           <span className="text-paragraph text-sm bg-background rounded-full px-3 pt-1">{this.state.language}</span>
         </div>
         <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
