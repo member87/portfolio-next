@@ -17,33 +17,31 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="text-white">
-        <div className="h-screen flex bg-background justify-center items-center background-pattern">
-          <div className="w-screen m-5 h-1/2 flex flex-col justify-center md:w-1/2">
+        <div className="h-screen flex flex-col bg-background justify-center items-center background-pattern">
+          <div className="w-screen m-5 px-10 h-1/2 flex flex-col justify-center md:w-1/2 md:px-0">
             <div className="text-accent text-xl mb-8">Hello, my name is</div>
-            <h1 className="text-6xl font-black">Jack</h1>
-            <div className="text-xl my-4">
+            <h1 className="text-6xl font-black">Jack Humes</h1>
+            <div className="text-sm uppercase my-4 tracking-widest">
               <Typewriter
                 options={{
-                  strings: ['Software developer', 'Information Security', 'Full stack web developer'],
+                  strings: ['Software Developer', 'Information Security', 'Web developer'],
                   autoStart: true,
                   loop: true,
                 }}
               />
             </div>
 
-            <div>
-              <Link href="/">
-                <button className="mt-6 mr-2 inline-block py-3 px-4 border-2 border-accent bg-accent rounded shadow w-fit">
-                  GitHub Projects
-                </button>
-              </Link>
-              <a href="#aboutme" className="mt-6 inline-block py-3 px-4 border-2 border-accent rounded shadow w-fit">About me</a>
-            </div>
+
           </div>
+
+            <div class="items-center flex flex-col text-paragraph tracking-widest">
+              <span class="py-2">scroll</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
         </div>
 
         <div className="bg-background-secondary">
-          <div className="grid grid-cols-1 w-full px-4 mx-auto py-40 lg:grid-cols-2 lg:space-x-20 lg:px-40" id="aboutme">
+          <div className="grid grid-cols-1 w-full px-4 mx-auto py-40 max-w-screen-2xl lg:grid-cols-2 lg:gap-10 lg:px-40" id="aboutme">
             <HomeCard title="About me">
               Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
             </HomeCard>
