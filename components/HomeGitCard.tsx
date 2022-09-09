@@ -1,7 +1,8 @@
 import React, { Component } from 'react'; // let's also import Component
 
 type HomeGitProps = {
-  project: string
+  project: string,
+  invert: boolean
 };
 
 type HomeGitState = {
@@ -43,10 +44,10 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
 
   render() {
     return (
-      <div className="bg-background-secondary p-5 flex flex-col">
+      <div className={`${this.props.invert ? "bg-background" : "bg-background-secondary"} p-5 flex flex-col`}>
         <div className="flex flex-wrap">
           <h4 className="text-xl flex-auto mb-1">{this.props.project}</h4>
-          <span className="text-paragraph text-sm bg-background rounded-full px-3 pt-1">{this.state.language}</span>
+          <span className={`${this.props.invert ? "bg-background-secondary" : "bg-background"} text-paragraph text-sm rounded-full px-3 pt-1`}>{this.state.language}</span>
         </div>
         <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
 

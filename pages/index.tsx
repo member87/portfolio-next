@@ -78,7 +78,7 @@ const Home: NextPage = () => {
         <div className="bg-background">
           <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl">
             <h3 className="text-2xl">GitHub Projects</h3>
-            <h4>A few examples of my opensource github projects</h4>
+            <h4>A couple of my open source GitHub projects</h4>
             <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
               <HomeGitCard project="cam-finder" />
               <HomeGitCard project="portfolio-next" />
