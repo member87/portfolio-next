@@ -34,10 +34,10 @@ const Home: NextPage = () => {
 
           </div>
 
-            <div className="items-center flex flex-col text-paragraph tracking-widest">
-              <span className="py-2">scroll</span>
-              <i className="fa-solid fa-chevron-down"></i>
-            </div>
+          <div className="items-center flex flex-col text-paragraph tracking-widest">
+            <span className="py-2">scroll</span>
+            <i className="fa-solid fa-chevron-down"></i>
+          </div>
         </div>
 
         <div className="bg-background-secondary">
@@ -47,8 +47,7 @@ const Home: NextPage = () => {
             </HomeCard>
 
             <HomeCard title="Skills">
-              <div className="space-y-4 space-x-4 flex flex-wrap">
-                <span></span>
+              <div className="flex flex-wrap child:mr-2 child:mb-2">
                 <Badge url="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
                 <Badge url="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
                 <Badge url="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />

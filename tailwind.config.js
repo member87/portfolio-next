@@ -18,5 +18,9 @@ module.exports = {
       'sans-serif': 'Helvetica'
     }
   },
-  plugins: [],
+  plugins: [
+    function({ addVariant }) {
+      addVariant('child', '& > *');
+    }
+  ],
 }
