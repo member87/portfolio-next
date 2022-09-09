@@ -25,6 +25,10 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
     }
   }
 
+  static defaultProps = {
+    invert: false,
+  }
+
   componentDidMount() {
     fetch('/api/github/info', {
       method: "POST",
