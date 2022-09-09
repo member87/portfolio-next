@@ -1,4 +1,5 @@
 import React, { Component } from 'react'; // let's also import Component
+import Link from 'next/link'
 
 type HomeGitProps = {
   project: string,
@@ -46,8 +47,13 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
     return (
       <div className={`${this.props.invert ? "bg-background" : "bg-background-secondary"} p-5 flex flex-col`}>
         <div className="flex flex-wrap">
-          <h4 className="text-xl flex-auto mb-1">{this.props.project}</h4>
-          <span className={`${this.props.invert ? "bg-background-secondary" : "bg-background"} text-paragraph text-sm rounded-full px-3 pt-1`}>{this.state.language}</span>
+          <a href={`https://github.com/member87/${this.props.project}`} className="flex-auto hover:underline underline-offset-8">
+            <h4 className="text-xl mb-1">{this.props.project}</h4>
+          </a>
+          <div className={`${this.props.invert ? "bg-background-secondary" : "bg-background"} text-paragraph text-sm rounded-full px-3 pt-1`}>
+            <div className={`w-2 h-2 mr-2 rounded-full inline-block bg-${this.state.language}`}></div>
+            {this.state.language}
+          </div>
         </div>
         <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
 

@@ -82,9 +82,9 @@ const Home: NextPage = () => {
             <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
               <HomeGitCard project="cam-finder" />
               <HomeGitCard project="portfolio-next" />
-              <HomeGitCard project="dotfiles" />
+              <HomeGitCard project="cam-finder-web" />
             </div>
-            <Link href="/">
+            <Link href="/github">
               <button className="mx-auto w-fit block border-2 px-8 py-3 border-accent">
                 GitHub Projects
               </button>
