@@ -68,7 +68,7 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
         }
         <div className="mt-6">
           {this.state.tags.map(tag => (
-            <Pill text={tag} />
+            <Pill text={tag} key={tag} />
           ))}
         </div>
         <div className="mt-6 text-paragraph">
