@@ -1,36 +1,32 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
+import GitCache from '../../../utils/gitcache'
 
-import { Cache, CacheContainer } from 'node-ts-cache'
-import { MemoryStorage } from 'node-ts-cache-storage-memory'
-
-const myCache = new CacheContainer(new MemoryStorage())
-
-
-
-type ReadmeResponse = {
+type readmeResponse = {
   text: string
 }
 
+type readmeRequest = {
+  project: string
+}
+
 async function getReadme(project: string): Promise<string> {
-  const readme = await myCache.getItem<string>(`readme:${project}`)
-  if (readme)
-    return readme
-
-
-  const resp: Response = await fetch(`https://raw.githubusercontent.com/member87/${project}/HEAD/README.md`);
-  const str = resp.clone().text();
-  await myCache.setItem(`readme:${project}`, str, { ttl: 43200 })
-
-  return str;
+  return GitCache.getUrl(`https://raw.githubusercontent.com/member87/${project}/HEAD/README.md`);
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<ReadmeResponse>
+  res: NextApiResponse<readmeResponse>
 ) {
 
-  const readme: string = await getReadme('cam-finder-web');
-  res.status(200).json({ text: readme })
+  let body: readmeRequest;
 
+  try {
+    body = JSON.parse(req.body);
+  } catch (e) {
+    body = req.body
+  }
+
+  const info: string = await getReadme(body.project);
+  res.status(200).json({ text: info })
 }

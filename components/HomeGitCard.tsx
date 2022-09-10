@@ -51,9 +51,9 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
     return (
       <div className={`${this.props.invert ? "bg-background" : "bg-background-secondary"} p-5 flex flex-col`}>
         <div className="flex flex-wrap">
-          <a href={`https://github.com/member87/${this.props.project}`} className="flex-auto hover:underline underline-offset-8">
-            <h4 className="text-xl mb-1">{this.props.project}</h4>
-          </a>
+          <Link href={`/view/${this.props.project}`}>
+            <h4 className="flex-auto hover:underline underline-offset-8 text-xl mb-1 hover:cursor-pointer">{this.props.project}</h4>
+          </Link>
           <div className={`${this.props.invert ? "bg-background-secondary" : "bg-background"} text-paragraph text-sm rounded-full px-3 pt-1`}>
             <div className={`w-2 h-2 mr-2 rounded-full inline-block bg-${this.state.language}`}></div>
             {this.state.language}
@@ -64,11 +64,11 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
         <div className="grid grid-cols-2">
           <span>
             <i className="fa-solid fa-star mr-2"></i>
-            <span className="text-paragraph">{this.state.stars}</span>
+            <span className="text-paragraph">{this.state.stars} stars</span>
           </span>
           <span>
             <i className="fa-solid fa-code-merge mr-2"></i>
-            <span className="text-paragraph">{this.state.forks}</span>
+            <span className="text-paragraph">{this.state.forks} forks</span>
           </span>
         </div>
       </div>

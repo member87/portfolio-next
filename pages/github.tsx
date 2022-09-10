@@ -16,7 +16,7 @@ const Home: NextPage = () => {
 
       <main className="text-white bg-background-secondary min-h-screen">
         <div className="bg-background">
-          <div className="w-full mx-auto max-w-screen-2xl px-40">
+          <div className="w-full px-5 md:w-5/6 md:px-0 lg:w-3/4 mx-auto">
             <div className="py-20">
               <h1 className="text-4xl pb-2">GitHub Projects</h1>
               <h2 className="text-xl">A collection of my open source GitHub projects</h2>
@@ -30,7 +30,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background-secondary">
-          <div className="grid grid-cols-1 w-full px-4 mx-auto py-20 gap-5 max-w-screen-2xl lg:grid-cols-2 lg:gap-10 lg:px-40">
+          <div className="grid grid-cols-1 gap-5 py-4 w-full px-5 md:w-5/6 md:px-0 md:grid-cols-2 lg:w-3/4 mx-auto">
             <HomeGitCard project="portfolio-next" invert />
             <HomeGitCard project="portfolio" invert />
             <HomeGitCard project="cam-finder" invert />

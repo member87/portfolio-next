@@ -8,7 +8,7 @@ export default class GitCache {
       return cacheResp;
 
     const resp: Response = await fetch(url);
-    const str = await resp.clone().json();
+    const str = await resp.clone().text();
     cache.put(url, str, 43200000); // 12 hours
     return str;
   }
