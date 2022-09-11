@@ -41,7 +41,7 @@ const Home: NextPage = () => {
             <div className="w-full px-5 md:w-5/6 md:px-0 lg:w-3/4 mx-auto">
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_280px] py-10">
                 <Readme project={project} />
-                <Sidebar project={project} ></Sidebar>
+                <Sidebar project={project} />
               </div>
             </div>
           }

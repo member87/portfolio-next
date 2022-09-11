@@ -1,6 +1,7 @@
 import React, { Component } from 'react'; // let's also import Component
 import Link from 'next/link'
 import Pill from '@/components/github/pill'
+import TextLoader from '@/components/TextLoader';
 
 type SidebarProps = {
   project: string,
@@ -13,7 +14,8 @@ type SidebarState = {
   language: string,
   watchers: number,
   url: string,
-  tags: string[]
+  tags: string[],
+  loaded: boolean,
 }
 
 
@@ -28,6 +30,7 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
       watchers: 0,
       url: "",
       tags: [],
+      loaded: false,
     }
   }
 
@@ -48,14 +51,15 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
           language: json.language,
           watchers: json.stargazers_count,
           url: json.homepage,
-          tags: json.topics
+          tags: json.topics,
+          loaded: true,
         })
       })
   }
 
   render() {
     return (
-      <div>
+      <div className="row-start-1 lg:row-start-auto">
         <div>
           <div className="font-bold">Description</div>
           <div>{this.state.description}</div>
@@ -73,24 +77,45 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
         </div>
         <div className="mt-6 text-paragraph">
           <div>
-            <i className="fa-solid fa-star w-4 mr-2"></i>
-            {this.state.stars} stars
+            {!this.state.loaded
+              ? <TextLoader />
+              : <>
+                <i className="fa-solid fa-star w-4 mr-2"></i>
+                {this.state.stars} stars
+              </>
+            }
           </div>
           <div>
-            <i className="fa-solid fa-eye w-4 mr-2"></i>
-            {this.state.watchers} watchers
+            {!this.state.loaded
+              ? <TextLoader />
+              : <>
+                <i className="fa-solid fa-eye w-4 mr-2"></i>
+                {this.state.watchers} watchers
+              </>
+            }
           </div>
           <div>
-            <i className="fa-solid fa-code-branch w-4 mr-2"></i>
-            {this.state.forks} forks
+            {!this.state.loaded
+              ? <TextLoader />
+              : <>
+                <i className="fa-solid fa-code-branch w-4 mr-2"></i>
+                {this.state.forks} forks
+              </>
+            }
           </div>
         </div>
 
         <div className="mt-6">
-          <div className="bg-background text-paragraph text-sm rounded-full px-4 py-2 inline-block">
-            <div className={`w-2 h-2 mr-2 rounded-full inline-block bg-${this.state.language}`}></div>
-            {this.state.language}
-          </div>
+          {!this.state.loaded
+            ? <TextLoader />
+            : <>
+              <div className="bg-background text-paragraph text-sm rounded-full px-4 py-2 inline-block">
+                <div className={`w-2 h-2 mr-2 rounded-full inline-block bg-${this.state.language}`}></div>
+                {this.state.language}
+              </div>
+            </>
+          }
+
 
         </div>
       </div>

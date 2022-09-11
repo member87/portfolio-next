@@ -38,7 +38,7 @@ export default class Readme extends Component<ReadmeProps, ReadmeState> {
   render() {
     return (
       <>
-        <div className="prose min-w-full border-2 border-background p-10 rounded prose-invert" dangerouslySetInnerHTML={{ __html: this.state.readme }}>
+        <div className="prose min-w-full p-0 rounded prose-invert md:p-10 md:border-2 md:border-background" dangerouslySetInnerHTML={{ __html: this.state.readme }}>
         </div>
       </>
     )
