@@ -17,7 +17,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-white bg-background min-h-screen">
+      <main className="text-white bg-background-secondary min-h-screen">
         <div className="bg-background">
           <div className="w-full px-5 mx-auto md:w-5/6 md:px-0 lg:w-3/4">
             <div className="py-20">

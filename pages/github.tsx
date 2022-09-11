@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <div className="w-full px-5 md:w-5/6 md:px-0 lg:w-3/4 mx-auto">
             <div className="py-20">
               <h1 className="text-4xl pb-2">GitHub Projects</h1>
-              <h2 className="text-xl">A collection of my open source GitHub projects</h2>
+              <h2>A collection of my open source GitHub projects</h2>
               <Link href="/">
                 <button className="mr-2 mt-4 text-paragraph">
                   <i className="fa-solid fa-arrow-left mr-2"></i>go back
