@@ -2,6 +2,7 @@ import React, { Component } from 'react'; // let's also import Component
 import Link from 'next/link'
 import Pill from '@/components/github/pill'
 import TextLoader from '@/components/TextLoader';
+import Languages from '@/components/github/language'
 
 type SidebarProps = {
   project: string,
@@ -62,7 +63,7 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
       <div className="row-start-1 lg:row-start-auto">
         <div>
           <div className="font-bold">Description</div>
-          <div>{this.state.description}</div>
+          <div className="text-sm">{this.state.description}</div>
         </div>
         {this.state.url &&
           <div className="mt-6">
@@ -75,7 +76,7 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
             <Pill text={tag} key={tag} />
           ))}
         </div>
-        <div className="mt-6 text-paragraph">
+        <div className="mt-6 text-paragraph text-sm">
           <div>
             {!this.state.loaded
               ? <TextLoader />
@@ -105,19 +106,18 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
           </div>
         </div>
 
+        <hr className="mt-6 border-background" />
+
         <div className="mt-6">
           {!this.state.loaded
             ? <TextLoader />
             : <>
-              <div className="bg-background text-paragraph text-sm rounded-full px-4 py-2 inline-block">
-                <div className={`w-2 h-2 mr-2 rounded-full inline-block bg-${this.state.language}`}></div>
-                {this.state.language}
-              </div>
+
+              <Languages project={this.props.project} />
             </>
           }
-
-
         </div>
+
       </div>
     )
   }

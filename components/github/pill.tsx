@@ -11,7 +11,7 @@ export default class Pill extends Component<PillProps, {}> {
 
   render() {
     return (
-      <span className='px-2 py-1 mr-2 mb-2 text-sm bg-accent rounded-full shadow inline-block'>{this.props.text}</span>
+      <span className='px-2 py-1 mr-2 mb-2 text-sm bg-accent rounded-full shadow inline-block text-xs'>{this.props.text}</span>
     )
   }
 }
