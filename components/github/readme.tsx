@@ -1,6 +1,8 @@
 import React, { Component } from 'react'; // let's also import Component
 import Link from 'next/link'
 import { marked } from "marked";
+import Image from 'next/image'
+
 
 type ReadmeProps = {
   project: string,
@@ -21,6 +23,20 @@ export default class Readme extends Component<ReadmeProps, ReadmeState> {
 
 
   componentDidMount() {
+    const renderer = new marked.Renderer();
+
+    renderer.image = (src, title, alt) => {
+      if (!src?.startsWith("http"))
+        src = `https://github.com/member87/${this.props.project}/raw/HEAD/${src}`
+      console.log(src)
+      return `<Image src=${src} alt=${alt} />`
+    }
+
+    marked.setOptions({
+      renderer: renderer
+    })
+
+
     fetch('/api/github/readme', {
       method: "POST",
       body: JSON.stringify({

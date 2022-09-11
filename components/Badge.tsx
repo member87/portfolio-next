@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'; // let's also import Component
 
 type BadgeProps = {
