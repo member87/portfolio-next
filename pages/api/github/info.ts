@@ -28,6 +28,6 @@ export default async function handler(
   }
 
   const info: string = await getInfo(body.project);
-  res.status(200).json({ text: info })
+  res.status(200).json({ text: JSON.parse(info) })
 
 }
