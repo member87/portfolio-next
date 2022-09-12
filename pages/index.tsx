@@ -47,7 +47,7 @@ const Home: NextPage = () => {
             </HomeCard>
 
             <HomeCard title="Skills">
-              <div className="flex flex-wrap child:mr-2 child:mb-2">
+              <div className="flex flex-wrap justify-center py-4 child:mr-2 child:mb-2">
                 <Badge url="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
                 <Badge url="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
                 <Badge url="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
