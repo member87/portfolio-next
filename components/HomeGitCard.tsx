@@ -68,7 +68,7 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
           : <div className="mt-5"><TextLoader /></div>
         }
 
-        <div className="grid grid-cols-2">
+        <div className="flex gap-4">
           <span>
             <i className="fa-solid fa-star mr-2"></i>
             <span className="text-paragraph">{this.state.stars} stars</span>
