@@ -1,5 +1,6 @@
 import React, { Component } from 'react'; // let's also import Component
 import Link from 'next/link'
+import TextLoader from '@/components/TextLoader'
 
 type HomeGitProps = {
   project: string,
@@ -11,6 +12,7 @@ type HomeGitState = {
   stars: number,
   forks: number,
   language: string,
+  loaded: boolean
 }
 
 
@@ -18,10 +20,11 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
   constructor(props: HomeGitProps) {
     super(props)
     this.state = {
-      description: "Loading...",
+      description: "",
       stars: 0,
       forks: 0,
-      language: ""
+      language: "",
+      loaded: false
     }
   }
 
@@ -42,7 +45,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
           description: json.description,
           stars: json.stargazers_count,
           forks: json.forks_count,
-          language: json.language
+          language: json.language,
+          loaded: true
         })
       })
   }
@@ -59,7 +63,10 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
             {this.state.language}
           </div>
         </div>
-        <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
+        {this.state.loaded
+          ? <p className="text-paragraph flex-auto py-4">{this.state.description}</p>
+          : <div className="mt-5"><TextLoader /></div>
+        }
 
         <div className="grid grid-cols-2">
           <span>
