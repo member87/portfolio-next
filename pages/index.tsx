@@ -43,7 +43,11 @@ const Home: NextPage = () => {
         <div className="bg-background-secondary">
           <div className="grid grid-cols-1 w-full px-4 mx-auto py-40 max-w-screen-2xl lg:grid-cols-2 lg:gap-10 lg:px-40" id="aboutme">
             <HomeCard title="About me">
-              Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
+              My name Jack and I have a passion for programming. I have made many things including websites, game plugins and various other programs.
+              I first got into programming by creating lua addons for <a href="https://gmod.facepunch.com/" className="text-blue-500">garry's mod</a> and after getting
+              some experince creating them I then became a freelance developer to create addons for other people. After this, I then got into web development
+              and began to create small basic websites to do various different things. While creating the backend for website I would found the security aspect
+              of it very interesting and enjoyed learning about the different attack vectors.
             </HomeCard>
 
             <HomeCard title="Skills">

@@ -29,7 +29,8 @@ export default class Readme extends Component<ReadmeProps, ReadmeState> {
       if (!src?.startsWith("http"))
         src = `https://github.com/member87/${this.props.project}/raw/HEAD/${src}`
       console.log(src)
-      return `<Image src=${src} alt=${alt} />`
+      return `<div class="shadow"><Image src=${src} alt=${alt} /></div>`
+
     }
 
     marked.setOptions({
