@@ -84,7 +84,7 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="bg-background-secondary pb-20">
+        <div className="bg-background-secondary py-48">
           <div className="bg-background skew-y-3">
             <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl -skew-y-3">
               <div className="text-center pb-8">
