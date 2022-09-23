@@ -79,21 +79,23 @@ const Home: NextPage = () => {
           </div>
         </div>
 
-        <div className="bg-background">
-          <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl">
-            <h3 className="text-2xl">GitHub Projects</h3>
-            <h4>A couple of my open source GitHub projects</h4>
-            <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
-              <HomeGitCard project="cam-finder" />
-              <HomeGitCard project="portfolio-next" />
-              <HomeGitCard project="cam-finder-web" />
-            </div>
-            <Link href="/github">
-              <button className="mx-auto w-fit block border-2 px-8 py-3 border-accent">
-                GitHub Projects
-              </button>
-            </Link>
+        <div className="bg-background-secondary pb-20">
+          <div className="bg-background skew-y-3">
+            <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl -skew-y-3">
+              <h3 className="text-2xl">GitHub Projects</h3>
+              <h4>A couple of my open source GitHub projects</h4>
+              <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
+                <HomeGitCard project="cam-finder" />
+                <HomeGitCard project="portfolio-next" />
+                <HomeGitCard project="cam-finder-web" />
+              </div>
+              <Link href="/github">
+                <button className="mx-auto w-fit block border-2 px-8 py-3 border-accent">
+                  GitHub Projects
+                </button>
+              </Link>
 
+            </div>
           </div>
         </div>
       </main>
