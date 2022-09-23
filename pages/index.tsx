@@ -30,6 +30,11 @@ const Home: NextPage = () => {
                 }}
               />
             </div>
+            <div className="py-4">
+              <a href="mailto:contact@jackhumes.com?subject=Contact Jack" className="bg-accent px-12 py-4 text-sm uppercase whitespace-nowrap" target="_blank" rel="noopener noreferrer">
+                Contact Me
+              </a>
+            </div>
 
 
           </div>
