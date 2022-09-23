@@ -49,7 +49,7 @@ const Home: NextPage = () => {
           <div className="grid grid-cols-1 w-full px-4 mx-auto py-40 max-w-screen-2xl lg:grid-cols-2 lg:gap-10 lg:px-40" id="aboutme">
             <HomeCard title="About me">
               My name Jack and I have a passion for programming. I have made many things including websites, game plugins and various other programs.
-              I first got into programming by creating lua addons for <a href="https://gmod.facepunch.com/" className="text-blue-500">garry&apos;s mod</a> and after getting
+              I first got into programming by creating lua addons for <a href="https://gmod.facepunch.com/" className="text-slate-500 hover:text-slate-600">garry&apos;s mod</a> and after getting
               some experince creating them I then became a freelance developer to create addons for other people. After this, I then got into web development
               and began to create small basic websites to do various different things. While creating the backend for website I would found the security aspect
               of it very interesting and enjoyed learning about the different attack vectors.
@@ -87,8 +87,10 @@ const Home: NextPage = () => {
         <div className="bg-background-secondary pb-20">
           <div className="bg-background skew-y-3">
             <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl -skew-y-3">
-              <h3 className="text-2xl">GitHub Projects</h3>
-              <h4>A couple of my open source GitHub projects</h4>
+              <div className="text-center pb-8">
+                <h3 className="text-3xl tracking-widest text-slate-500 uppercase">GitHub Projects</h3>
+                <h4 className="text-slate-600 tracking-wide">A couple of my open source GitHub projects</h4>
+              </div>
               <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
                 <HomeGitCard project="cam-finder" />
                 <HomeGitCard project="portfolio-next" />

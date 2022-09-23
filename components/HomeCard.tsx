@@ -9,7 +9,7 @@ export default class HomeCard extends Component<HomeCardProps, {}> {
   render() {
     return (
       <div className="shadow my-5 p-5 bg-background rounded shadow md:p-10">
-        <h3 className="text-2xl my-2">{this.props.title}</h3>
+        <h3 className="text-2xl my-4 uppercase text-slate-600">{this.props.title}</h3>
         {this.props.children}
       </div>
     )

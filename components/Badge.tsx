@@ -6,6 +6,6 @@ type BadgeProps = {
 
 export default class Badge extends Component<BadgeProps, {}> {
   render() {
-    return <img src={this.props.url} />
+    return <img src={this.props.url} className="hover:scale-105 duration-150" />
   }
 }

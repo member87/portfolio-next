@@ -53,7 +53,7 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
 
   render() {
     return (
-      <div className={`${this.props.invert ? "bg-background" : "bg-background-secondary"} p-5 flex flex-col`}>
+      <div className={`${this.props.invert ? "bg-background" : "bg-background-secondary"} p-5 flex flex-col hover:shadow-lg duration-150`}>
         <div className="flex flex-wrap">
           <Link href={`/view/${this.props.project}`}>
             <h4 className="flex-auto hover:underline underline-offset-8 text-xl mb-1 hover:cursor-pointer">{this.props.project}</h4>
