@@ -18,7 +18,13 @@ jobs:
     - name: Run build task
       run: npm run build --if-present
     - name: Deploy to Server
-      run: ls -la
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          SOURCE: ".next"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.REMOTE_USER }}
+          TARGET: ${{ secrets.REMOTE_TARGET }}
 
     - name: Restart Server
       uses: appleboy/ssh-action@master
