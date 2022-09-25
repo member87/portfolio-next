@@ -14,9 +14,9 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         username: ${{ secrets.REMOTE_USER }}
         script: |
-          cd portfolio-next &&
-          git pull &&
-          npm install &&
-          npm run build &&
+          cd portfolio-next
+          git pull
+          npm install
+          npm run build
           pm2 restart next
         
