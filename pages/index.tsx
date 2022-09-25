@@ -1,12 +1,44 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
 import Head from 'next/head'
-import Typewriter from 'typewriter-effect';
 import HomeCard from '../components/HomeCard';
 import Badge from '../components/Badge';
 import HomeGitCard from '../components/HomeGitCard';
+import TextSlider from '@/components/TextSlider';
+import FloatingSquareLoader from '@/components/FloatingSquareLoader';
 import Link from 'next/link'
 
+
+
+const badges = [
+  "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",
+  "https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white",
+  "https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white",
+  "https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E",
+  "https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white",
+  "https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white",
+  "https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54",
+  "https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white",
+  "https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white",
+  "https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white",
+  "https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white",
+  "https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white",
+  "https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white",
+  "https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D",
+  "https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white",
+  "https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB",
+  "https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white",
+  "https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white",
+  "https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white",
+  "https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white",
+  "https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black",
+  "https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge",
+]
+
+
+
+
 const Home: NextPage = () => {
+
 
   return (
     <>
@@ -16,82 +48,68 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-white">
-        <div className="h-screen flex flex-col bg-background justify-center items-center background-pattern">
-          <div className="w-screen m-5 px-10 h-1/2 flex flex-col justify-center md:w-1/2 md:px-0">
-            <div className="text-accent text-xl mb-8">Hello, my name is</div>
-            <h1 className="text-6xl font-black">Jack Humes</h1>
-            <div className="text-sm uppercase my-4 tracking-widest">
-              <Typewriter
-                options={{
-                  strings: ['Software Developer', 'Information Security', 'Web developer'],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </div>
-            <div className="py-4">
-              <a href="mailto:contact@jackhumes.com?subject=Contact Jack" className="bg-accent px-12 py-4 text-sm uppercase whitespace-nowrap" target="_blank" rel="noopener noreferrer">
-                Contact Me
+      <main className="text-white overflow-hidden">
+
+        <section className="h-screen flex flex-col bg-background justify-center items-center background-pattern relative">
+          <div className="w-screen m-5 px-10 h-1/2 flex flex-col justify-center z-50 md:w-1/2 md:px-0">
+            <h1 className="text-5xl md:text-[5em] tracking-wide font-semibold">
+              <TextSlider text="Jack" delay={0} />
+              <TextSlider text="Humes" delay={300} />
+            </h1>
+            <div className="py-6 px-4 flex text-paragraph child:mr-8 text-3xl">
+              <a href="https://github.com/member87" className="hover:text-white">
+                <i className="fa-brands fa-github"></i>
               </a>
+
+              <a href="mailto:contact@jackhumes.com" className="hover:text-white">
+                <i className="fa-regular fa-envelope"></i>
+              </a>
+
+              <a href="https://jackhumes.com" className="hover:text-white">
+                <i className="fa-solid fa-globe"></i>
+              </a>
+
             </div>
-
-
           </div>
+          <FloatingSquareLoader />
+        </section>
 
-          <div className="items-center flex flex-col text-paragraph tracking-widest">
-            <span className="py-2">scroll</span>
-            <i className="fa-solid fa-chevron-down"></i>
+
+
+        <section className="bg-background-secondary pb-64 pt-32 flex items-center justify-center">
+          <div className="w-screen px-6 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
+            <h2 className='text-3xl font-semibold mb-6'>Hi there</h2>
+            <p className="text-xl mb-6">
+              I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus on website development. My projects that I have worked on include
+              a variety of different websites, game plugins, scripts and software development.
+
+              <br className="mb-6" />
+
+              This website is my porfolio to show some of my projects that I have worked on and to show my recent work. I&apos;m always working on new projects
+              and creating new things.
+            </p>
+
+            <a className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded" href="mailto:contact@jackhumes.com">
+              <i className="fa-solid fa-paper-plane mr-2"></i>
+              <span className="font-semibold">Send me a message</span>
+            </a>
+
+            <div className="flex flex-wrap justify-center pt-24 child:mr-2 child:mb-2">
+              {badges.map((v, k) => {
+                return <Badge url={v} key={k} child={k} />
+              })}
+            </div>
           </div>
-        </div>
+        </section>
 
-        <div className="bg-background-secondary">
-          <div className="grid grid-cols-1 w-full px-4 mx-auto py-40 max-w-screen-2xl lg:grid-cols-2 lg:gap-10 lg:px-40" id="aboutme">
-            <HomeCard title="About me">
-              My name Jack and I have a passion for programming. I have made many things including websites, game plugins and various other programs.
-              I first got into programming by creating lua addons for <a href="https://gmod.facepunch.com/" className="text-slate-500 hover:text-slate-600">garry&apos;s mod</a> and after getting
-              some experince creating them I then became a freelance developer to create addons for other people. After this, I then got into web development
-              and began to create small basic websites to do various different things. While creating the backend for website I would found the security aspect
-              of it very interesting and enjoyed learning about the different attack vectors.
-            </HomeCard>
-
-            <HomeCard title="Skills">
-              <div className="flex flex-wrap justify-center py-4 child:mr-2 child:mb-2">
-                <Badge url="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" />
-                <Badge url="https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/php-%23777BB4.svg?style=for-the-badge&logo=php&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" />
-                <Badge url="https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/laravel-%23FF2D20.svg?style=for-the-badge&logo=laravel&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/vuejs-%2335495e.svg?style=for-the-badge&logo=vuedotjs&logoColor=%234FC08D" />
-                <Badge url="https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" />
-                <Badge url="https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/shell_script-%23121011.svg?style=for-the-badge&logo=gnu-bash&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" />
-                <Badge url="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
-                <Badge url="https://img.shields.io/badge/Arch%20Linux-1793D1?logo=arch-linux&logoColor=fff&style=for-the-badge" />
+        <section className="bg-background-secondary h-screen flex items-center">
+          <div className="bg-background skew-y-6 w-full overflow-hidden">
+            <div className="py-40 w-screen mx-auto lg:px-40 max-w-screen-2xl -skew-y-6">
+              <div className="text-center pb-8 px-4">
+                <h3 className="text-3xl font-semiblack uppercase tracking-widest ">GitHub Projects</h3>
+                <h4 className="text-paragraph tracking-wide">A couple of my open source GitHub projects</h4>
               </div>
-            </HomeCard>
-          </div>
-        </div>
-
-        <div className="bg-background-secondary py-48">
-          <div className="bg-background skew-y-3">
-            <div className="py-40 px-8 w-full mx-auto lg:px-40 max-w-screen-2xl -skew-y-3">
-              <div className="text-center pb-8">
-                <h3 className="text-3xl tracking-widest text-slate-500 uppercase">GitHub Projects</h3>
-                <h4 className="text-slate-600 tracking-wide">A couple of my open source GitHub projects</h4>
-              </div>
-              <div className="grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
+              <div className="px-4 grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
                 <HomeGitCard project="cam-finder" />
                 <HomeGitCard project="portfolio-next" />
                 <HomeGitCard project="cam-finder-web" />
@@ -104,8 +122,8 @@ const Home: NextPage = () => {
 
             </div>
           </div>
-        </div>
-      </main>
+        </section>
+      </main >
 
     </>
   )

@@ -7,8 +7,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'background': "#13151d",
-        'background-secondary': "#0f1118",
+        'background': "#1f2223",
+        'background-secondary': "#2E3234",
         'accent': "#0F75AE",
         'paragraph': "#94a1b2",
 
@@ -25,10 +25,13 @@ module.exports = {
         "Rust": "rgb(222, 165, 132)",
         "TypeScript": "#3178c6",
         "Dockerfile": "#384d54"
+      },
+      letterSpacing: {
+        "1xl": "0.2em",
       }
     },
     fontFamily: {
-      'sans': 'Roboto',
+      'sans': 'Montserrat',
       'sans-serif': 'Helvetica'
     }
   },
