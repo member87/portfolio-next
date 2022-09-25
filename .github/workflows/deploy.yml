@@ -19,13 +19,7 @@ jobs:
       run: npm run build --if-present
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          SOURCE: ".next"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "node_modules/"
+      run: rsync --version
 
     - name: Restart Server
       uses: appleboy/ssh-action@master
