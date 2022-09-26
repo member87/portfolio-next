@@ -12,7 +12,7 @@ const FloatingSquareLoader = () => {
 
   for (let i = 0; i < squareCount; i++) {
     floatingSquares.push(
-      <FloatingSquare key={i} size={randomNumber(80, 200)} delay={randomNumber(0, 10000)} offset={`${i / squareCount * 100}%`} />
+      <FloatingSquare key={i} size={randomNumber(80, 200)} height={randomNumber(0, 90)} offset={`${i / squareCount * 100}%`} />
     )
   }
   useEffect(() => {

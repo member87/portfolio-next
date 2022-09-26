@@ -39,6 +39,9 @@ module.exports = {
     {
       pattern: /bg-(PHP|Vue|Blade|JavaScript|CSS|Python|Lua|Shell|GLSL|Rust|TypeScript|Dockerfile)/,
     },
+    {
+      pattern: /border-(red|green|orange|teal)-500/
+    }
   ],
   plugins: [
     require('@tailwindcss/typography'),

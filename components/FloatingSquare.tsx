@@ -3,48 +3,67 @@ import { useSpring, animated, easings } from 'react-spring'
 
 interface FloatingSquareProps {
   size: number,
-  delay: number,
+  height: number,
   offset: string
 }
 
+const colors = [
+  "red",
+  "green",
+  "orange",
+  "teal"
+]
+
 const FloatingSquare = (props: FloatingSquareProps) => {
 
+  const speed = props.size ** 2;
+  const distance = 120 - props.height;
+  const multi = 120 / distance
+  const col = colors[Math.floor(Math.random() * colors.length)]
+  console.log(col)
+
   const divUp = useSpring({
-    from: { bottom: "-20%", left: props.offset },
+    from: { bottom: `${props.height}%`, left: props.offset },
     to: { bottom: "120%" },
     loop: {
       delay: 0,
-      reset: true
+      reset: true,
+      from: {
+        bottom: `-${props.height / 1.5}%`
+      },
+      config: {
+        duration: speed
+      }
     },
     config: {
-      duration: props.size ** 2
+      duration: speed / multi
     },
-    delay: props.delay
   })
 
   const roundAnim = useSpring({
-    from: { borderRadius: "0%", rotateZ: 0, width: props.size, height: props.size },
+    from: { borderRadius: "25%", rotateZ: 0, width: props.size, height: props.size },
     to: [
       { borderRadius: "40%", rotateZ: 360 },
-      { borderRadius: "0%", rotateZ: 720 },
+      { borderRadius: "5%", rotateZ: 720 },
     ],
     loop: {
       delay: 0,
-      reset: true
+      reset: true,
+      from: {
+        borderRadius: "5%",
+        rotateZ: 0
+      }
     },
     config: {
-      duration: props.size ** 1.8,
-      //easing: easings.easeInOutQuart,
+      duration: props.size ** 1.7,
     },
-    delay: props.delay,
-    pause: false,
   })
 
 
 
   return (
     <animated.div style={divUp} className="absolute z-0">
-      <animated.div style={roundAnim} className="w-16 h-16 bg-background-secondary opacity-40"></animated.div>
+      <animated.div style={roundAnim} className={`w-16 h-16 bg-background-secondary opacity-20 border border-${col}-500 z-0`}></animated.div>
     </animated.div>
   )
 }
