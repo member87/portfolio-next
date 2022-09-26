@@ -7,20 +7,12 @@ interface FloatingSquareProps {
   offset: string
 }
 
-const colors = [
-  "red",
-  "green",
-  "orange",
-  "teal"
-]
 
 const FloatingSquare = (props: FloatingSquareProps) => {
 
   const speed = props.size ** 2;
   const distance = 120 - props.height;
   const multi = 120 / distance
-  const col = colors[Math.floor(Math.random() * colors.length)]
-  console.log(col)
 
   const divUp = useSpring({
     from: { bottom: `${props.height}%`, left: props.offset },
@@ -63,7 +55,7 @@ const FloatingSquare = (props: FloatingSquareProps) => {
 
   return (
     <animated.div style={divUp} className="absolute z-0">
-      <animated.div style={roundAnim} className={`w-16 h-16 bg-background-secondary opacity-20 border border-${col}-500 z-0`}></animated.div>
+      <animated.div style={roundAnim} className={`w-16 h-16 bg-background-secondary opacity-20 border border-accent z-0`}></animated.div>
     </animated.div>
   )
 }

@@ -89,7 +89,7 @@ const Home: NextPage = () => {
               and creating new things.
             </p>
 
-            <a className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded" href="mailto:contact@jackhumes.com">
+            <a className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background" href="mailto:contact@jackhumes.com">
               <i className="fa-solid fa-paper-plane mr-2"></i>
               <span className="font-semibold">Send me a message</span>
             </a>

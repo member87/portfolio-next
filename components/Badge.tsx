@@ -39,7 +39,7 @@ const Badge = (props: BadgeProps) => {
       setVisible(true)
     })
     if (containerRef.current) observer.observe(containerRef.current)
-  }, [containerRef])
+  }, [containerRef, api, props.child])
 
 
 
