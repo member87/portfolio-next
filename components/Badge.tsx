@@ -18,7 +18,7 @@ const Badge = (props: BadgeProps) => {
       opacity: 0,
     },
     config: {
-      duration: 500
+      duration: 250
     },
   }));
 
@@ -34,7 +34,7 @@ const Badge = (props: BadgeProps) => {
               translateY: 0,
             }
           })
-        }, props.child * 50);
+        }, props.child * 25);
       }
       setVisible(true)
     })
@@ -44,9 +44,9 @@ const Badge = (props: BadgeProps) => {
 
 
   return (
-    <span ref={containerRef}>
+    <span ref={containerRef} className="hover:scale-110 duration-150">
       {visible && (
-        <animated.img src={props.url} style={anim} className="hover:scale-105 duration-150" />
+        <animated.img src={props.url} style={anim} />
       )}
     </span>
   )
