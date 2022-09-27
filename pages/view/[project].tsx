@@ -1,13 +1,13 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import Sidebar from '@/components/github/sidebar'
-import Readme from '@/components/github/readme'
+import type { NextPage } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import Link from "next/link";
+import Sidebar from "@/components/github/sidebar";
+import Readme from "@/components/github/readme";
 
 const Home: NextPage = () => {
-  const { query, isReady } = useRouter()
-  const project = query.project as string
+  const { query, isReady } = useRouter();
+  const project = query.project as string;
 
   return (
     <>
@@ -22,7 +22,10 @@ const Home: NextPage = () => {
           <div className="w-full px-5 mx-auto md:w-5/6 md:px-0 lg:w-3/4">
             <div className="py-20">
               <h1 className="text-4xl pb-2">{project}</h1>
-              <a href={`https://github.com/member87/${project}`} className="block">
+              <a
+                href={`https://github.com/member87/${project}`}
+                className="block"
+              >
                 <i className="fa-brands fa-github mr-2"></i>
                 view on github
               </a>
@@ -37,20 +40,18 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background-secondary">
-          {isReady &&
+          {isReady && (
             <div className="w-full px-5 md:w-5/6 md:px-0 lg:w-3/4 mx-auto">
               <div className="grid grid-cols-1 gap-5 lg:grid-cols-[minmax(0,1fr)_280px] py-10">
                 <Readme project={project} />
                 <Sidebar project={project} />
               </div>
             </div>
-          }
+          )}
         </div>
-
       </main>
-
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

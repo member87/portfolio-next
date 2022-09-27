@@ -1,9 +1,8 @@
-
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import HomeCard from '../components/HomeCard';
-import HomeGitCard from '../components/HomeGitCard';
-import Link from 'next/link'
+import type { NextPage } from "next";
+import Head from "next/head";
+import HomeCard from "../components/HomeCard";
+import HomeGitCard from "../components/HomeGitCard";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -40,11 +39,9 @@ const Home: NextPage = () => {
             <HomeGitCard project="nvim" invert />
           </div>
         </div>
-
       </main>
-
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
