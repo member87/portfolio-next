@@ -51,13 +51,15 @@ const Home: NextPage = () => {
             <div className="py-6 px-4 flex text-paragraph child:mr-8 text-3xl">
               <a
                 href="https://github.com/member87"
-                className="hover:text-white">
+                className="hover:text-white"
+              >
                 <i className="fa-brands fa-github"></i>
               </a>
 
               <a
                 href="mailto:contact@jackhumes.com"
-                className="hover:text-white">
+                className="hover:text-white"
+              >
                 <i className="fa-regular fa-envelope"></i>
               </a>
 
