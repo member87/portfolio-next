@@ -41,7 +41,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-white overflow-hidden">
+      <main className="text-white overflow-hidden relative">
         <section className="h-screen flex flex-col bg-background justify-center items-center background-pattern relative">
           <div className="w-screen m-5 px-10 h-1/2 flex flex-col justify-center z-50 md:w-1/2 md:px-0">
             <h1 className="text-5xl md:text-[5em] tracking-wide font-semibold">
@@ -67,6 +67,7 @@ const Home: NextPage = () => {
             </div>
           </div>
           <FloatingSquareLoader />
+          <div className="w-screen top-3/4 bottom-0 absolute bg-gradient-to-b from-transparent to-background-secondary"></div>
         </section>
 
         <section className="bg-background-secondary pb-64 flex items-center justify-center z-50 relative">

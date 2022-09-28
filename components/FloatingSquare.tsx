@@ -19,7 +19,7 @@ const FloatingSquare = (props: FloatingSquareProps) => {
       delay: 0,
       reset: true,
       from: {
-        bottom: `-${props.height / 1.5}%`,
+        bottom: `-20%`,
       },
       config: {
         duration: speed,
