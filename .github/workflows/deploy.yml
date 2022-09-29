@@ -32,7 +32,9 @@ jobs:
           export NVM_DIR=~/.nvm
           source ~/.nvm/nvm.sh
           cd portfolio-next
+          git stash
           git pull
+          git stash apply
           npm install
           npm run build
           pm2 restart next
