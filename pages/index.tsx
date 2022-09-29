@@ -56,7 +56,6 @@ const Home: NextPage = () => {
                   className="hover:text-accent"
                 >
                   Follow on GitHub
-
                   <i className="fa-brands fa-github ml-4"></i>
                 </a>
 
@@ -65,14 +64,11 @@ const Home: NextPage = () => {
                   className="hover:text-accent"
                 >
                   Send me a message
-
                   <i className="fa-regular fa-envelope ml-4"></i>
                 </a>
-
               </div>
             </div>
             <FloatingSquareLoader />
-
           </Background>
         </section>
 
@@ -80,14 +76,14 @@ const Home: NextPage = () => {
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
             <h2 className="text-3xl font-semibold mb-6">Hi there</h2>
             <p className="text-xl mb-6">
-              I&apos;m Jack, a developer & cyber secutiy enthusiast with a
-              focus on website development. My projects that I have worked
-              on include a variety of different websites, game plugins,
-              scripts and software development.
+              I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
+              on website development. My projects that I have worked on include
+              a variety of different websites, game plugins, scripts and
+              software development.
               <br className="mb-6" />
               This website is my porfolio to show some of my projects that I
-              have worked on and to show my recent work. I&apos;m always
-              working on new projects and creating new things.
+              have worked on and to show my recent work. I&apos;m always working
+              on new projects and creating new things.
             </p>
 
             <a
