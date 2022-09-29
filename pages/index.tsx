@@ -74,19 +74,18 @@ const Home: NextPage = () => {
         <section className="bg-background-secondary pb-64 flex items-center justify-center z-50 relative">
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
             <div className="relative group">
-
               <span className="absolute -inset-6 rounded-xl bg-background transition-all opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-50 z-0"></span>
               <div className="z-10 relative p-5">
                 <h2 className="text-3xl font-semibold mb-6">Hi there</h2>
                 <p className="text-xl mb-6">
-                  I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
-                  on website development. My projects that I have worked on include
-                  a variety of different websites, game plugins, scripts and
-                  software development.
+                  I&apos;m Jack, a developer & cyber secutiy enthusiast with a
+                  focus on website development. My projects that I have worked
+                  on include a variety of different websites, game plugins,
+                  scripts and software development.
                   <br className="mb-6" />
                   This website is my porfolio to show some of my projects that I
-                  have worked on and to show my recent work. I&apos;m always working
-                  on new projects and creating new things.
+                  have worked on and to show my recent work. I&apos;m always
+                  working on new projects and creating new things.
                 </p>
 
                 <a
