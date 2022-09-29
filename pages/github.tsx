@@ -29,7 +29,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className="bg-background-secondary">
-          <div className="grid grid-cols-1 gap-5 py-4 w-full px-5 md:w-5/6 md:px-0 md:grid-cols-2 lg:w-3/4 mx-auto">
+          <div className="grid grid-cols-1 gap-10 py-16 w-full px-5 md:w-5/6 md:px-0 md:grid-cols-2 lg:w-3/4 lg:max-w-7xl mx-auto">
             <HomeGitCard project="portfolio-next" invert />
             <HomeGitCard project="portfolio" invert />
             <HomeGitCard project="cam-finder" invert />

@@ -50,7 +50,6 @@ export default class Languages extends Component<LanguageProps, LanguageState> {
   render() {
     return (
       <>
-        <div className="mb-4">Languages</div>
         <div className="w-full h-2 bg-accent rounded-full overflow-hidden flex mb-4">
           {Object.entries(this.state.json).map(([key, value]) => {
             return (

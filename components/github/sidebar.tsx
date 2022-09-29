@@ -115,6 +115,7 @@ export default class Sidebar extends Component<SidebarProps, SidebarState> {
             <TextLoader />
           ) : (
             <>
+              <div className="mb-4">Languages</div>
               <Languages project={this.props.project} />
             </>
           )}

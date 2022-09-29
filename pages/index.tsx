@@ -42,7 +42,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="text-white overflow-hidden relative">
-        <section className="h-screen flex flex-col bg-background justify-center items-center background-pattern relative">
+        <section className="h-screen flex flex-col bg-background justify-center items-center background-pattern relative border-b-2 border-black">
           <div className="w-screen m-5 px-10 h-1/2 flex flex-col justify-center z-50 md:w-1/2 md:px-0">
             <h1 className="text-5xl md:text-[5em] tracking-wide font-semibold">
               <TextSlider text="Jack" delay={0} />
@@ -69,43 +69,48 @@ const Home: NextPage = () => {
             </div>
           </div>
           <FloatingSquareLoader />
-          <div className="w-screen top-3/4 bottom-0 absolute bg-gradient-to-b from-transparent to-background-secondary"></div>
         </section>
 
         <section className="bg-background-secondary pb-64 flex items-center justify-center z-50 relative">
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
-            <h2 className="text-3xl font-semibold mb-6">Hi there</h2>
-            <p className="text-xl mb-6">
-              I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
-              on website development. My projects that I have worked on include
-              a variety of different websites, game plugins, scripts and
-              software development.
-              <br className="mb-6" />
-              This website is my porfolio to show some of my projects that I
-              have worked on and to show my recent work. I&apos;m always working
-              on new projects and creating new things.
-            </p>
+            <div className="relative group">
 
-            <a
-              className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background"
-              href="mailto:contact@jackhumes.com"
-            >
-              <i className="fa-solid fa-envelope mr-2"></i>
-              <span className="font-semibold">Send me a message</span>
-            </a>
+              <span className="absolute -inset-6 rounded-xl bg-background transition-all opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-50 z-0"></span>
+              <div className="z-10 relative p-5">
+                <h2 className="text-3xl font-semibold mb-6">Hi there</h2>
+                <p className="text-xl mb-6">
+                  I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
+                  on website development. My projects that I have worked on include
+                  a variety of different websites, game plugins, scripts and
+                  software development.
+                  <br className="mb-6" />
+                  This website is my porfolio to show some of my projects that I
+                  have worked on and to show my recent work. I&apos;m always working
+                  on new projects and creating new things.
+                </p>
 
-            <div className="flex flex-wrap justify-center pt-24 child:mr-2 child:mb-2">
-              {badges.map((v, k) => {
-                return <Badge url={v} key={k} child={k} />;
-              })}
+                <a
+                  className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background"
+                  href="mailto:contact@jackhumes.com"
+                >
+                  <i className="fa-solid fa-envelope mr-2"></i>
+                  <span className="font-semibold">Send me a message</span>
+                </a>
+
+                <div className="flex flex-wrap justify-center pt-24 child:mr-2 child:mb-2">
+                  {badges.map((v, k) => {
+                    return <Badge url={v} key={k} child={k} />;
+                  })}
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="bg-background-secondary h-screen flex items-center">
-          <div className="bg-background skew-y-6 w-full overflow-hidden">
-            <div className="py-40 w-screen mx-auto lg:px-40 max-w-screen-2xl -skew-y-6">
-              <div className="text-center pb-8 px-4">
+          <div className="bg-background skew-y-3 w-full overflow-hidden">
+            <div className="py-40 w-screen mx-auto lg:px-40 max-w-screen-2xl -skew-y-3">
+              <div className="text-center pb-20 px-4">
                 <h3 className="text-3xl font-semiblack uppercase tracking-widest ">
                   GitHub Projects
                 </h3>
@@ -113,7 +118,7 @@ const Home: NextPage = () => {
                   A couple of my open source GitHub projects
                 </h4>
               </div>
-              <div className="px-4 grid grid-cols-1 my-10 gap-5 lg:grid-cols-3">
+              <div className="px-4 grid grid-cols-1 my-16 gap-20 mx-auto md:max-w-2xl lg:max-w-7xl xl:grid-cols-3 ">
                 <HomeGitCard project="cam-finder" />
                 <HomeGitCard project="portfolio-next" />
                 <HomeGitCard project="cam-finder-web" />
