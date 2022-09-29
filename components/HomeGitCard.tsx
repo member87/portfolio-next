@@ -55,9 +55,8 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
       <Link href={`/view/${this.props.project}`}>
         <div className="relative group hover:cursor-pointer">
           <span
-            className={`${
-              !this.props.invert ? "bg-background-secondary" : "bg-background"
-            } absolute -inset-6 rounded-xl transition-all opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-50 z-0`}
+            className={`${!this.props.invert ? "bg-background-secondary" : "bg-background"
+              } absolute -inset-6 rounded-xl transition-all opacity-0 scale-95 group-hover:shadow group-hover:scale-100 group-hover:opacity-50 z-0`}
           ></span>
           <div className="relative z-10">
             <div className="flex flex-wrap">
