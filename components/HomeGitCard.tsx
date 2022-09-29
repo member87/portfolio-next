@@ -1,7 +1,7 @@
 import React, { Component } from "react"; // let's also import Component
 import Link from "next/link";
 import TextLoader from "@/components/TextLoader";
-import Languages from "@/components/github/language"
+import Languages from "@/components/github/language";
 
 type HomeGitProps = {
   project: string;
@@ -15,7 +15,6 @@ type HomeGitState = {
   language: string;
   loaded: boolean;
 };
-
 
 export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
   constructor(props: HomeGitProps) {
@@ -54,9 +53,12 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
   render() {
     return (
       <Link href={`/view/${this.props.project}`}>
-
         <div className="relative group hover:cursor-pointer">
-          <span className={`${!this.props.invert ? "bg-background-secondary" : "bg-background"} absolute -inset-6 rounded-xl transition-all opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-50 z-0`}></span>
+          <span
+            className={`${
+              !this.props.invert ? "bg-background-secondary" : "bg-background"
+            } absolute -inset-6 rounded-xl transition-all opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-50 z-0`}
+          ></span>
           <div className="relative z-10">
             <div className="flex flex-wrap">
               <h4 className="flex-auto font-semibold group-hover:underline underline-offset-8 text-xl mb-1">
@@ -74,9 +76,7 @@ export default class HomeGitCard extends Component<HomeGitProps, HomeGitState> {
             )}
             <Languages project={this.props.project} />
           </div>
-
-        </div >
-
+        </div>
       </Link>
     );
   }
