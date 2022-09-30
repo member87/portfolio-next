@@ -30,7 +30,6 @@ const Home: NextPage = () => {
 
         <div className="bg-background-secondary">
           <div className="grid grid-cols-1 gap-10 py-16 w-full px-10 md:w-5/6 md:grid-cols-2 lg:grid-cols-3 lg:w-full lg:max-w-7xl mx-auto">
-
             <HomeGitCard project="portfolio-next" invert />
             <HomeGitCard project="portfolio" invert />
             <HomeGitCard project="cam-finder" invert />
