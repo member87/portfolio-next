@@ -22,12 +22,6 @@
   margin-bottom: 1em;
 }
 
-.background-gradient {
-  background: radial-gradient(
-    theme(colors.background-secondary) 0%,
-    theme(colors.background) 50%
-  );
-}
 
 .background-border {
   background: radial-gradient(

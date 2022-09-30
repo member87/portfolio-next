@@ -10,14 +10,10 @@ const Background = (props: BackgroundProps) => {
 
   useEffect(() => {
     addEventListener("mousemove", (event) => {
-      if (!gradient.current || !border.current) return;
+      if (!border.current) return;
 
-      let box = gradient?.current?.getBoundingClientRect();
-      gradient.current.style.left = event.clientX - box.width / 2 + "px";
-      gradient.current.style.top =
-        event.clientY - box.height / 2 + window.scrollY + "px";
 
-      box = border.current.getBoundingClientRect();
+      let box = border.current.getBoundingClientRect();
       border.current.style.left = event.clientX - box.width / 2 + "px";
       border.current.style.top =
         event.clientY - box.height / 2 + window.scrollY + "px";
@@ -27,10 +23,6 @@ const Background = (props: BackgroundProps) => {
   return (
     <div className="bg-background relative overflow-hidden">
       <div className="h-screen -top-1 flex flex-col bg-background justify-center items-center background-pattern relative overflow-hidden z-10">
-        <div
-          className=" background-gradient absolute w-full aspect-square"
-          ref={gradient}
-        ></div>
         {props.children}
       </div>
 
