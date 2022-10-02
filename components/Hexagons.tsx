@@ -33,7 +33,7 @@ const Hexagons = () => {
     <div className="absolute -top-12 left-0">
       {[...Array(rows)].map((x, y) => {
         return (
-          <div className="flex" style={{ transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y}rem)` }}>
+          <div className="flex" key={y} style={{ transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y}rem)` }}>
             {[...Array(cols)].map((e, i) => hexagon())}
           </div>
         )
