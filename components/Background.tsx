@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from "react";
-import Hexagons from '@/components/Hexagons'
+import Hexagons from "@/components/Hexagons";
 
 type BackgroundProps = {
   children: React.ReactNode;
