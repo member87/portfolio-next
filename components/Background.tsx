@@ -13,7 +13,6 @@ const Background = (props: BackgroundProps) => {
     addEventListener("mousemove", (event) => {
       if (!border.current) return;
 
-
       let box = border.current.getBoundingClientRect();
       border.current.style.left = event.clientX - box.width / 2 + "px";
       border.current.style.top =
