@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import Hexagons from '@/components/Hexagons'
 
 type BackgroundProps = {
   children: React.ReactNode;
@@ -24,6 +25,7 @@ const Background = (props: BackgroundProps) => {
     <div className="bg-background relative overflow-hidden">
       <div className="h-screen -top-1 flex flex-col bg-background justify-center items-center background-pattern relative overflow-hidden z-10">
         {props.children}
+        <Hexagons />
       </div>
 
       <div

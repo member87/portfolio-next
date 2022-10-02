@@ -13,7 +13,7 @@ const FloatingSquareLoader = () => {
     floatingSquares.push(
       <FloatingSquare
         key={i}
-        size={randomNumber(80, 200)}
+        size={randomNumber(100, 200)}
         height={randomNumber(0, 90)}
         offset={`${(i / squareCount) * 100}%`}
       />

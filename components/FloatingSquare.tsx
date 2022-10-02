@@ -50,16 +50,18 @@ const FloatingSquare = (props: FloatingSquareProps) => {
       },
     },
     config: {
-      duration: props.size ** 1.7,
+      duration: props.size ** 1.63,
     },
   });
 
   return (
-    <animated.div style={divUp} className="absolute z-0">
+    <animated.div style={divUp} className="absolute z-30 opacity-20">
       <animated.div
         style={roundAnim}
-        className={`w-16 h-16 bg-background-secondary opacity-20 border border-accent z-0`}
-      ></animated.div>
+        className={`w-16 h-16 border border-accent z-30 overflow-hidden`}
+      >
+        <div className="w-full h-full bg-background-secondary contrast-[1000] saturate-[100] brightness-[2]"></div>
+      </animated.div>
     </animated.div>
   );
 };
