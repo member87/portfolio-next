@@ -21,7 +21,7 @@ const FloatingSquareLoader = () => {
   }
   useEffect(() => {
     let num = Math.round(0.0000015 * (window.innerWidth + 1400) ** 2);
-    squareCountSet(num);
+    squareCountSet(0);
   }, []);
 
   return <>{floatingSquares}</>;

@@ -18,7 +18,7 @@ const Hexagons = () => {
   const hexagon = () => {
     return (
       <div className="hexagon aspect-[1/1.1547] h-24 relative z-10">
-        <div className="inset-1 bg-background-secondary/20 hexagon absolute"></div>
+        <div className="inset-1 bg-background-secondary/20 hexagon absolute hover:bg-accent/5 transition-all ease-in-out hover:duration-75 duration-[5s]"></div>
       </div>
     );
   };
@@ -31,9 +31,8 @@ const Hexagons = () => {
             className="flex"
             key={y}
             style={{
-              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${
-                1.54 * y
-              }rem)`,
+              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y
+                }rem)`,
             }}
           >
             {[...Array(cols)].map((e, i) => hexagon())}

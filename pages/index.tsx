@@ -45,12 +45,12 @@ const Home: NextPage = () => {
       <main className="text-white overflow-hidden">
         <section>
           <Background>
-            <div className="w-screen m-5 px-4 flex flex-col justify-center z-50 md:px-10 md:flex-row lg:max-w-4xl">
+            <div className="w-screen m-5 px-4 flex flex-col justify-center z-50 md:px-10 md:flex-row lg:max-w-4xl pointer-events-none">
               <h1 className="text-5xl flex-auto pb-5 md:text-[5em] tracking-wide font-semibold">
                 <TextSlider text="Jack" delay={0} />
                 <TextSlider text="Humes" delay={300} />
               </h1>
-              <div className="px-4 flex flex-col text-paragraph child:mr-8 text-xl text-left md:text-right">
+              <div className="px-4 flex flex-col text-paragraph child:mr-8 text-xl text-left md:text-right child:pointer-events-auto">
                 <a
                   href="https://github.com/member87"
                   className="hover:text-accent"

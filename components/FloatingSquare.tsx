@@ -55,7 +55,7 @@ const FloatingSquare = (props: FloatingSquareProps) => {
   });
 
   return (
-    <animated.div style={divUp} className="absolute z-30 opacity-20">
+    <animated.div style={divUp} className="absolute z-30 opacity-20 pointer-events-none">
       <animated.div
         style={roundAnim}
         className={`w-16 h-16 border border-accent z-30 overflow-hidden`}
