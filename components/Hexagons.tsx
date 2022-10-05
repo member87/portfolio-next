@@ -92,7 +92,7 @@ const Hexagons = () => {
             {[...Array(cols)].map((e, i) => {
               const index = y * cols + i;
               return (
-                <Hexagon index={index} col={y} activated={activated.includes(index)} click={hexagonClick} />
+                <Hexagon index={index} col={y} key={index} activated={activated.includes(index)} click={hexagonClick} />
               )
             }
             )}
