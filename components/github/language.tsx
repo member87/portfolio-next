@@ -40,10 +40,6 @@ export default class Languages extends Component<LanguageProps, LanguageState> {
         json: json,
         count: count,
       });
-
-      Object.entries(this.state.json).map(([key, value]) => {
-        console.log(key, value);
-      });
     });
   }
 

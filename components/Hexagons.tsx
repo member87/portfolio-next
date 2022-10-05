@@ -78,7 +78,6 @@ const Hexagons = () => {
   }
 
   return (
-    //(4 * 1.547 / 2 - .4)
     <div className="absolute -top-12 left-0">
       {[...Array(rows)].map((x, y) => {
         return (
@@ -86,9 +85,8 @@ const Hexagons = () => {
             className="flex"
             key={y}
             style={{
-              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${
-                1.54 * y
-              }rem)`,
+              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y
+                }rem)`,
             }}
           >
             {[...Array(cols)].map((e, i) => {
