@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Hexagon from "./Hexagon";
+import Hexagon from "@/components/Hexagon";
 
 const Hexagons = () => {
   const [rows, setRows] = useState(0);
@@ -78,9 +78,8 @@ const Hexagons = () => {
             className="flex"
             key={y}
             style={{
-              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${
-                1.54 * y
-              }rem)`,
+              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y
+                }rem)`,
             }}
           >
             {[...Array(cols)].map((e, i) => {
