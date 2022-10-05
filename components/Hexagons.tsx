@@ -33,6 +33,7 @@ const Hexagons = () => {
   };
 
   const updateActivated = (index: number, col: number) => {
+    if (Math.floor(index / cols) != col) return;
     if (!verifyIndex(index)) return;
 
     setActivated((current) => [...current, index]);
@@ -78,9 +79,8 @@ const Hexagons = () => {
             className="flex"
             key={y}
             style={{
-              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${
-                1.54 * y
-              }rem)`,
+              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y
+                }rem)`,
             }}
           >
             {[...Array(cols)].map((e, i) => {
