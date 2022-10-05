@@ -78,17 +78,23 @@ const Hexagons = () => {
             className="flex"
             key={y}
             style={{
-              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${1.54 * y
-                }rem)`,
+              transform: `translate(-${(y % 2) * 1.547 * 1.67}rem, -${
+                1.54 * y
+              }rem)`,
             }}
           >
             {[...Array(cols)].map((e, i) => {
               const index = y * cols + i;
               return (
-                <Hexagon index={index} col={y} key={index} activated={activated.includes(index)} click={hexagonClick} />
-              )
-            }
-            )}
+                <Hexagon
+                  index={index}
+                  col={y}
+                  key={index}
+                  activated={activated.includes(index)}
+                  click={hexagonClick}
+                />
+              );
+            })}
           </div>
         );
       })}
