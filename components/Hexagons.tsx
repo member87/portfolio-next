@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
+import Hexagon from "./Hexagon";
 
 const Hexagons = () => {
   const [rows, setRows] = useState(0);
   const [cols, setCols] = useState(0);
+
+  const init: number[] = [];
+  const [activated, setActivated] = useState(init);
+  let activatedList: number[] = [];
 
   const setHexagons = () => {
     setRows(Math.ceil(window.innerHeight / 60));
@@ -15,13 +20,63 @@ const Hexagons = () => {
     addEventListener("resize", () => setHexagons());
   }, []);
 
-  const hexagon = () => {
-    return (
-      <div className="hexagon aspect-[1/1.1547] h-24 relative z-10">
-        <div className="inset-1 bg-background-secondary/20 hexagon absolute hover:bg-accent/5 transition-all ease-in-out hover:duration-[0ms] duration-[5s]"></div>
-      </div>
-    );
-  };
+  const verifyIndex = (index: number) => {
+    if (activated.includes(index))
+      return false;
+
+    if (activatedList.includes(index))
+      return false;
+
+    if (index < 0)
+      return false;
+
+    if (index > cols * rows)
+      return false;
+
+    return true;
+  }
+
+  const updateActivated = (index: number, col: number) => {
+    if (!verifyIndex(index))
+      return;
+
+    setActivated(current => [...current, index])
+    activatedList.push(index)
+
+    setTimeout(() => {
+      setActivated(current =>
+        current.filter(i => {
+          return i !== index;
+        }),
+      );
+    }, 200)
+
+
+    setTimeout(() => {
+      expand(index, col);
+    }, 100)
+  }
+
+  const expand = (index: number, col: number) => {
+    updateActivated(index - 1, col);
+    updateActivated(index + 1, col);
+    updateActivated(index - cols, col - 1);
+    updateActivated(index + cols, col + 1);
+
+    if (col % 2) {
+      updateActivated(index - cols - 1, col - 1);
+      updateActivated(index + cols - 1, col + 1);
+    } else {
+      updateActivated(index - cols + 1, col - 1)
+      updateActivated(index + cols + 1, col + 1)
+    }
+  }
+
+
+  const hexagonClick = (index: number, col: number) => {
+    updateActivated(index, col)
+  }
+
   return (
     //(4 * 1.547 / 2 - .4)
     <div className="absolute -top-12 left-0">
@@ -35,7 +90,13 @@ const Hexagons = () => {
                 }rem)`,
             }}
           >
-            {[...Array(cols)].map((e, i) => hexagon())}
+            {[...Array(cols)].map((e, i) => {
+              const index = y * cols + i;
+              return (
+                <Hexagon index={index} col={y} activated={activated.includes(index)} click={hexagonClick} />
+              )
+            }
+            )}
           </div>
         );
       })}
