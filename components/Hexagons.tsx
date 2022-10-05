@@ -21,41 +21,35 @@ const Hexagons = () => {
   }, []);
 
   const verifyIndex = (index: number) => {
-    if (activated.includes(index))
-      return false;
+    if (activated.includes(index)) return false;
 
-    if (activatedList.includes(index))
-      return false;
+    if (activatedList.includes(index)) return false;
 
-    if (index < 0)
-      return false;
+    if (index < 0) return false;
 
-    if (index > cols * rows)
-      return false;
+    if (index > cols * rows) return false;
 
     return true;
-  }
+  };
 
   const updateActivated = (index: number, col: number) => {
-    if (!verifyIndex(index))
-      return;
+    if (!verifyIndex(index)) return;
 
-    setActivated(current => [...current, index])
-    activatedList.push(index)
+    setActivated((current) => [...current, index]);
+    activatedList.push(index);
 
     setTimeout(() => {
-      setActivated(current =>
-        current.filter(i => {
+      setActivated((current) =>
+        current.filter((i) => {
           return i !== index;
-        }),
+        })
       );
-    }, 200)
-
+    }, 200);
 
     setTimeout(() => {
       expand(index, col);
-    }, 100)
-  }
+    }, 100);
+  };
 
   const expand = (index: number, col: number) => {
     updateActivated(index - 1, col);
@@ -67,15 +61,14 @@ const Hexagons = () => {
       updateActivated(index - cols - 1, col - 1);
       updateActivated(index + cols - 1, col + 1);
     } else {
-      updateActivated(index - cols + 1, col - 1)
-      updateActivated(index + cols + 1, col + 1)
+      updateActivated(index - cols + 1, col - 1);
+      updateActivated(index + cols + 1, col + 1);
     }
-  }
-
+  };
 
   const hexagonClick = (index: number, col: number) => {
-    updateActivated(index, col)
-  }
+    updateActivated(index, col);
+  };
 
   return (
     //(4 * 1.547 / 2 - .4)
@@ -94,10 +87,14 @@ const Hexagons = () => {
             {[...Array(cols)].map((e, i) => {
               const index = y * cols + i;
               return (
-                <Hexagon index={index} col={y} activated={activated.includes(index)} click={hexagonClick} />
-              )
-            }
-            )}
+                <Hexagon
+                  index={index}
+                  col={y}
+                  activated={activated.includes(index)}
+                  click={hexagonClick}
+                />
+              );
+            })}
           </div>
         );
       })}
