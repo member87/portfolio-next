@@ -7,6 +7,8 @@ import TextSlider from "@/components/TextSlider";
 import FloatingSquareLoader from "@/components/FloatingSquareLoader";
 import Link from "next/link";
 import Background from "@/components/Background";
+import Experience from "@/components/Experience";
+import BadgeIcon from "@/components/BadgeIcon";
 
 const badges = [
   "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",
@@ -74,7 +76,7 @@ const Home: NextPage = () => {
 
         <section className="bg-background-secondary pb-32 flex items-center justify-center z-20 relative">
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
-            <h2 className="text-3xl font-semibold mb-6">Hi there</h2>
+            <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
             <p className="text-xl mb-6">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
               on website development. I have worked on different projects which
@@ -93,18 +95,29 @@ const Home: NextPage = () => {
               <i className="fa-solid fa-envelope mr-2"></i>
               <span className="font-semibold">Send me a message</span>
             </a>
-
-            <div className="flex flex-wrap justify-center pt-24 child:mr-2 child:mb-2">
-              {badges.map((v, k) => {
-                return <Badge url={v} key={k} child={k} />;
-              })}
-            </div>
           </div>
         </section>
 
+
+        <section className="bg-background-secondary flex items-center flex-col pt-10">
+          <h3 className="text-3xl font-semiblack uppercase tracking-widest mb-10">
+            Work Experience
+          </h3>
+
+          <div className="">
+            <Experience logo="/companies/dorset-tech.png" name="Dorset Tech" title="Junior Web Developer" start="November 2022" end="Present" url="https://dorset.tech">
+              <i className="fa-brands fa-wordpress"></i>
+              <i className="fa-brands fa-php"></i>
+              <i className="fa-brands fa-html5"></i>
+              <i className="fa-brands fa-css3-alt"></i>
+            </Experience>
+          </div>
+        </section>
+
+
         <section className="bg-background-secondary min-h-screen flex items-center">
           <div className="py-8 bg-background w-full relative z-30 lg:skew-y-3">
-            <div className="py-8 w-screen mx-auto max-w-screen-2xl lg:-skew-y-3">
+            <div className="py-8 w-screening this mx-auto max-w-screen-2xl lg:-skew-y-3">
               <div className="text-center">
                 <h3 className="text-3xl font-semiblack uppercase tracking-widest ">
                   GitHub Projects

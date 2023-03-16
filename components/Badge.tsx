@@ -3,7 +3,7 @@ import { useSpring, animated, easings } from "react-spring";
 
 type BadgeProps = {
   url: string;
-  child: number;
+  child?: number;
 };
 
 const Badge = (props: BadgeProps) => {
@@ -30,7 +30,7 @@ const Badge = (props: BadgeProps) => {
               translateY: 0,
             },
           });
-        }, props.child * 25);
+        }, (props.child ?? 0) * 25);
       }
       setVisible(true);
     });
