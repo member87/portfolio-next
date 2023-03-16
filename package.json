@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.0",
+    "@vercel/analytics": "^0.1.11",
     "memory-cache": "^0.2.0",
     "next": "12.2.5",
     "node-ts-cache-storage-memory": "^4.4.0",
