@@ -8,7 +8,6 @@ import FloatingSquareLoader from "@/components/FloatingSquareLoader";
 import Link from "next/link";
 import Background from "@/components/Background";
 import Experience from "@/components/Experience";
-import BadgeIcon from "@/components/BadgeIcon";
 
 const badges = [
   "https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white",

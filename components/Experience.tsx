@@ -1,5 +1,3 @@
-import React, { useState, useRef, useEffect } from "react"; // let's also import Component
-import { useSpring, animated, easings } from "react-spring";
 import Image from 'next/image';
 
 type ExperienceProps = {
