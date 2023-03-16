@@ -18,24 +18,3 @@ jobs:
         commit_message: "🧹 prettier"
       
 
-  deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Deploy to server
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.REMOTE_HOST }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        username: ${{ secrets.REMOTE_USER }}
-        script: |
-          export NVM_DIR=~/.nvm
-          source ~/.nvm/nvm.sh
-          cd portfolio-next
-          git stash
-          git pull
-          git stash apply
-          npm install
-          npm run build
-          pm2 restart next
-        
