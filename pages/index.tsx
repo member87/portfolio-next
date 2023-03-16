@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         </section>
 
 
-        <section className="bg-background-secondary flex items-center flex-col pt-10">
+        <section className="bg-background-secondary flex items-center flex-col py-10">
           <h3 className="text-3xl font-semiblack uppercase tracking-widest mb-10">
             Work Experience
           </h3>
