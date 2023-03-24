@@ -60,7 +60,7 @@ const Home: NextPage = () => {
                   <i className="fa-brands fa-github mr-2 text-6xl"></i>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/jack-humes-70777222a"
+                  href="https://www.linkedin.com/in/jackhumes"
                   className="hover:text-accent duration-200"
                 >
                   <i className="fa-brands fa-linkedin mr-2 text-6xl"></i>
