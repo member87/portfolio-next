@@ -46,26 +46,24 @@ const Home: NextPage = () => {
       <main className="text-white overflow-hidden">
         <section>
           <Background>
-            <div className="w-screen m-5 px-4 flex flex-col justify-center z-50 md:px-10 md:flex-row lg:max-w-4xl pointer-events-none">
+            <div className="w-screen m-5 px-4 flex flex-col justify-center z-50 md:px-10 lg:max-w-4xl pointer-events-none">
               <h1 className="text-5xl flex-auto pb-5 md:text-[5em] tracking-wide font-semibold">
                 <TextSlider text="Jack" delay={0} />
                 <TextSlider text="Humes" delay={300} />
               </h1>
-              <div className="px-4 flex flex-col text-paragraph child:mr-8 text-xl text-left md:text-right child:pointer-events-auto">
+
+              <div className="flex text-gray-200 child:pointer-events-auto gap-2">
                 <a
                   href="https://github.com/member87"
-                  className="hover:text-accent"
+                  className="hover:text-accent duration-200"
                 >
-                  Follow on GitHub
-                  <i className="fa-brands fa-github ml-4"></i>
+                  <i className="fa-brands fa-github mr-2 text-6xl"></i>
                 </a>
-
                 <a
-                  href="mailto:contact@jackhumes.com"
-                  className="hover:text-accent"
+                  href="https://www.linkedin.com/in/jack-humes-70777222a"
+                  className="hover:text-accent duration-200"
                 >
-                  Send me a message
-                  <i className="fa-regular fa-envelope ml-4"></i>
+                  <i className="fa-brands fa-linkedin mr-2 text-6xl"></i>
                 </a>
               </div>
             </div>
@@ -75,10 +73,12 @@ const Home: NextPage = () => {
 
         <section className="bg-background-secondary pb-32 flex items-center justify-center z-20 relative">
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
+            <div className="flex flex-col text-3xl gap-2 pb-5">
+            </div>
             <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
             <p className="text-xl mb-6">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
-              on website development. I have worked on different projects which
+              on wesite development. I have worked on different projects which
               include a variety of different websites, game plugins, scripts and
               software development.
               <br className="mb-6" />
