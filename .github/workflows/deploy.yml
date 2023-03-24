@@ -3,8 +3,8 @@ name: Node CI
 on: [push]
 
 jobs:
-
-  steps:
+  
+  prettier:
     runs-on: ubuntu-latest
 
     steps:
