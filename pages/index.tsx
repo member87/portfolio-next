@@ -73,8 +73,7 @@ const Home: NextPage = () => {
 
         <section className="bg-background-secondary pb-32 flex items-center justify-center z-20 relative">
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
-            <div className="flex flex-col text-3xl gap-2 pb-5">
-            </div>
+            <div className="flex flex-col text-3xl gap-2 pb-5"></div>
             <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
             <p className="text-xl mb-6">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
@@ -97,14 +96,20 @@ const Home: NextPage = () => {
           </div>
         </section>
 
-
         <section className="bg-background-secondary flex items-center flex-col py-10">
           <h3 className="text-3xl font-semiblack uppercase tracking-widest mb-10">
             Work Experience
           </h3>
 
           <div className="">
-            <Experience logo="/companies/dorset-tech.png" name="Dorset Tech" title="Junior Web Developer" start="November 2022" end="Present" url="https://dorset.tech">
+            <Experience
+              logo="/companies/dorset-tech.png"
+              name="Dorset Tech"
+              title="Junior Web Developer"
+              start="November 2022"
+              end="Present"
+              url="https://dorset.tech"
+            >
               <i className="fa-brands fa-wordpress"></i>
               <i className="fa-brands fa-php"></i>
               <i className="fa-brands fa-html5"></i>
@@ -112,7 +117,6 @@ const Home: NextPage = () => {
             </Experience>
           </div>
         </section>
-
 
         <section className="bg-background-secondary min-h-screen flex items-center">
           <div className="py-8 bg-background w-full relative z-30 lg:skew-y-3">
