@@ -35,6 +35,7 @@ const Home: NextPage = () => {
             <HomeGitCard project="cam-finder" invert />
             <HomeGitCard project="cam-finder-rust" invert />
             <HomeGitCard project="cam-finder-web" invert />
+            <HomeGitCard project="rhul-attendance" invert />
             <HomeGitCard project="dotfiles" invert />
             <HomeGitCard project="nvim" invert />
           </div>
