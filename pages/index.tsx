@@ -77,7 +77,7 @@ const Home: NextPage = () => {
             <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
             <p className="text-xl mb-6">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
-              on wesite development. I have worked on different projects which
+              on website development. I have worked on different projects which
               include a variety of different websites, game plugins, scripts and
               software development.
               <br className="mb-6" />
