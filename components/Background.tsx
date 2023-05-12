@@ -22,7 +22,7 @@ const Background = (props: BackgroundProps) => {
 
   return (
     <div className="bg-background relative overflow-hidden">
-      <div className="h-screen -top-1 flex flex-col bg-background justify-center items-center background-pattern relative overflow-hidden z-10">
+      <div className="h-[50vh] -top-1 flex flex-col bg-background justify-center items-center background-pattern relative overflow-hidden z-10">
         {props.children}
         <Hexagons />
       </div>
