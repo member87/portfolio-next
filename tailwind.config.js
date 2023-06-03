@@ -24,7 +24,8 @@ module.exports = {
         "GLSL": "#5686a5",
         "Rust": "rgb(222, 165, 132)",
         "TypeScript": "#3178c6",
-        "Dockerfile": "#384d54"
+        "Dockerfile": "#384d54",
+        "HTML": "#e34c26"
       },
       letterSpacing: {
         "1xl": "0.2em",
