@@ -38,7 +38,7 @@ module.exports = {
   },
   safelist: [
     {
-      pattern: /bg-(PHP|Vue|Blade|JavaScript|CSS|Python|Lua|Shell|GLSL|Rust|TypeScript|Dockerfile)/,
+      pattern: /bg-(PHP|Vue|Blade|JavaScript|CSS|Python|Lua|Shell|GLSL|Rust|TypeScript|Dockerfile|HTML)/,
     },
   ],
   plugins: [
