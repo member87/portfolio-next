@@ -132,7 +132,7 @@ const Home: NextPage = () => {
               <div className="px-8 grid grid-cols-1 py-16 gap-20 mx-auto md:max-w-2xl lg:max-w-7xl lg:grid-cols-3 ">
                 <HomeGitCard project="cam-finder" />
                 <HomeGitCard project="eventtickets" />
-                <HomeGitCard project="cam-finder-web" />
+                <HomeGitCard project="cam-finder-gui" />
               </div>
               <Link href="/github">
                 <button className="mx-auto block border-2 px-8 py-3 border-accent">
