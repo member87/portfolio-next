@@ -103,10 +103,10 @@ const Home: NextPage = () => {
 
           <div className="">
             <Experience
-              logo="/companies/dorset-tech.png"
-              name="Dorset Tech"
+              logo="/companies/imegamedia.jpg"
+              name="Imegamedia"
               title="Junior Web Developer"
-              start="November 2022"
+              start="August 203"
               end="Present"
               url="https://dorset.tech"
             >
