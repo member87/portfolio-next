@@ -24,7 +24,8 @@ module.exports = {
         "GLSL": "#5686a5",
         "Rust": "rgb(222, 165, 132)",
         "TypeScript": "#3178c6",
-        "Dockerfile": "#384d54"
+        "Dockerfile": "#384d54",
+        "HTML": "#e34c26"
       },
       letterSpacing: {
         "1xl": "0.2em",
@@ -37,7 +38,7 @@ module.exports = {
   },
   safelist: [
     {
-      pattern: /bg-(PHP|Vue|Blade|JavaScript|CSS|Python|Lua|Shell|GLSL|Rust|TypeScript|Dockerfile)/,
+      pattern: /bg-(PHP|Vue|Blade|JavaScript|CSS|Python|Lua|Shell|GLSL|Rust|TypeScript|Dockerfile|HTML)/,
     },
   ],
   plugins: [

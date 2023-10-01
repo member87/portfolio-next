@@ -77,7 +77,7 @@ const Home: NextPage = () => {
             <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
             <p className="text-xl mb-6">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
-              on wesite development. I have worked on different projects which
+              on website development. I have worked on different projects which
               include a variety of different websites, game plugins, scripts and
               software development.
               <br className="mb-6" />
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
               <div className="px-8 grid grid-cols-1 py-16 gap-20 mx-auto md:max-w-2xl lg:max-w-7xl lg:grid-cols-3 ">
                 <HomeGitCard project="cam-finder" />
                 <HomeGitCard project="eventtickets" />
-                <HomeGitCard project="cam-finder-web" />
+                <HomeGitCard project="cam-finder-gui" />
               </div>
               <Link href="/github">
                 <button className="mx-auto block border-2 px-8 py-3 border-accent">
