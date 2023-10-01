@@ -16,7 +16,7 @@ const FloatingSquareLoader = () => {
         size={randomNumber(100, 200)}
         height={randomNumber(0, 90)}
         offset={`${(i / squareCount) * 100}%`}
-      />
+      />,
     );
   }
   useEffect(() => {

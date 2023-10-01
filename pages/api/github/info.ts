@@ -15,7 +15,7 @@ async function getInfo(project: string): Promise<string> {
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<infoResponse>
+  res: NextApiResponse<infoResponse>,
 ) {
   let body: infoRequest;
 

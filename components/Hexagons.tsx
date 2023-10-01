@@ -43,7 +43,7 @@ const Hexagons = () => {
       setActivated((current) =>
         current.filter((i) => {
           return i !== index;
-        })
+        }),
       );
     }, 200);
 
