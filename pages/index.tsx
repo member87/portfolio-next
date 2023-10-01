@@ -108,7 +108,7 @@ const Home: NextPage = () => {
               title="Junior Web Developer"
               start="August 2023"
               end="Present"
-              url="https://dorset.tech"
+              url="https://imegamedia.co.uk"
             >
               <i className="fa-brands fa-laravel"></i>
               <i className="fa-brands fa-php"></i>
