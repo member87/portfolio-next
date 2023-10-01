@@ -23,14 +23,17 @@ const Badge = (props: BadgeProps) => {
   useEffect(() => {
     const observer = new IntersectionObserver((entires) => {
       if (entires[0].isIntersecting) {
-        setTimeout(() => {
-          api.start({
-            to: {
-              opacity: 1,
-              translateY: 0,
-            },
-          });
-        }, (props.child ?? 0) * 25);
+        setTimeout(
+          () => {
+            api.start({
+              to: {
+                opacity: 1,
+                translateY: 0,
+              },
+            });
+          },
+          (props.child ?? 0) * 25,
+        );
       }
       setVisible(true);
     });

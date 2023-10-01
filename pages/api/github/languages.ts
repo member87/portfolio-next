@@ -12,13 +12,13 @@ type langRequest = {
 
 async function getReadme(project: string): Promise<string> {
   return GitCache.getUrl(
-    `https://api.github.com/repos/member87/${project}/languages`
+    `https://api.github.com/repos/member87/${project}/languages`,
   );
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<langResponse>
+  res: NextApiResponse<langResponse>,
 ) {
   let body: langRequest;
 

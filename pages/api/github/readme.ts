@@ -12,13 +12,13 @@ type readmeRequest = {
 
 async function getReadme(project: string): Promise<string> {
   return GitCache.getUrl(
-    `https://raw.githubusercontent.com/member87/${project}/HEAD/README.md`
+    `https://raw.githubusercontent.com/member87/${project}/HEAD/README.md`,
   );
 }
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse<readmeResponse>
+  res: NextApiResponse<readmeResponse>,
 ) {
   let body: readmeRequest;
 
