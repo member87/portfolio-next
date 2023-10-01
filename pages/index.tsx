@@ -110,10 +110,10 @@ const Home: NextPage = () => {
               end="Present"
               url="https://dorset.tech"
             >
-              <i className="fa-brands fa-wordpress"></i>
+              <i className="fa-brands fa-laravel"></i>
               <i className="fa-brands fa-php"></i>
               <i className="fa-brands fa-html5"></i>
-              <i className="fa-brands fa-css3-alt"></i>
+              <i className="fa-brands fa-js"></i>
             </Experience>
           </div>
         </section>
