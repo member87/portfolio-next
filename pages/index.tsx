@@ -106,7 +106,7 @@ const Home: NextPage = () => {
               logo="/companies/imegamedia.jpg"
               name="Imegamedia"
               title="Junior Web Developer"
-              start="August 203"
+              start="August 2023"
               end="Present"
               url="https://dorset.tech"
             >
