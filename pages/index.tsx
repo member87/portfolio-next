@@ -131,7 +131,7 @@ const Home: NextPage = () => {
               </div>
               <div className="px-8 grid grid-cols-1 py-16 gap-20 mx-auto md:max-w-2xl lg:max-w-7xl lg:grid-cols-3 ">
                 <HomeGitCard project="cam-finder" />
-                <HomeGitCard project="eventtickets" />
+                <HomeGitCard project="portfolio-next" />
                 <HomeGitCard project="cam-finder-gui" />
               </div>
               <Link href="/github">
