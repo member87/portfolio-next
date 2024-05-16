@@ -100,7 +100,6 @@ const Home: NextPage = () => {
               <i className="fa-solid fa-blog mr-2"></i>
               <span className="font-semibold">Checkout my blog</span>
             </a>
-
           </div>
         </section>
 
