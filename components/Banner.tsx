@@ -10,7 +10,7 @@ export function Banner() {
   const handleBanner = () => {
     localStorage.setItem("banner", "false");
     setBanner("false");
-  }
+  };
 
   if (banner === "false") return null;
 
