@@ -75,7 +75,7 @@ const Home: NextPage = () => {
           <div className="w-screen px-6 pt-32 md:w-3/4 lg:w-1/2 lg:max-w-4xl z-50">
             <div className="flex flex-col text-3xl gap-2 pb-5"></div>
             <h2 className="text-3xl font-semibold mb-6">Hi There!</h2>
-            <p className="text-xl mb-6">
+            <p className="text-xl mb-10">
               I&apos;m Jack, a developer & cyber secutiy enthusiast with a focus
               on website development. I have worked on different projects which
               include a variety of different websites, game plugins, scripts and
@@ -87,12 +87,20 @@ const Home: NextPage = () => {
             </p>
 
             <a
-              className="mt-6 hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background"
+              className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background"
               href="mailto:contact@jackhumes.com"
             >
               <i className="fa-solid fa-envelope mr-2"></i>
               <span className="font-semibold">Send me a message</span>
             </a>
+            <a
+              className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background ml-2"
+              href="https://blog.jackhumes.com"
+            >
+              <i className="fa-solid fa-blog mr-2"></i>
+              <span className="font-semibold">Checkout my blog</span>
+            </a>
+
           </div>
         </section>
 
