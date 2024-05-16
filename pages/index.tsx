@@ -102,7 +102,6 @@ const Home: NextPage = () => {
                 <span className="font-semibold">Checkout my blog</span>
               </a>
             </div>
-
           </div>
         </section>
 
