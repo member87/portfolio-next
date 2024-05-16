@@ -86,20 +86,22 @@ const Home: NextPage = () => {
               on new projects and creating new things.
             </p>
 
-            <a
-              className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background"
-              href="mailto:contact@jackhumes.com"
-            >
-              <i className="fa-solid fa-envelope mr-2"></i>
-              <span className="font-semibold">Send me a message</span>
-            </a>
-            <a
-              className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background ml-2"
-              href="https://blog.jackhumes.com"
-            >
-              <i className="fa-solid fa-blog mr-2"></i>
-              <span className="font-semibold">Checkout my blog</span>
-            </a>
+            <div className="flex flex-wrap gap-4">
+              <a
+                className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background inline-block whitespace-nowrap"
+                href="mailto:contact@jackhumes.com"
+              >
+                <i className="fa-solid fa-envelope mr-2"></i>
+                <span className="font-semibold">Send me a message</span>
+              </a>
+              <a
+                className="hover:bg-accent p-4 duration-200 ease-in-out rounded bg-background inline-block whitespace-nowrap"
+                href="https://blog.jackhumes.com"
+              >
+                <i className="fa-solid fa-blog mr-2"></i>
+                <span className="font-semibold">Checkout my blog</span>
+              </a>
+            </div>
 
           </div>
         </section>
