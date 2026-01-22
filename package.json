@@ -12,7 +12,7 @@
     "@fortawesome/fontawesome-free": "^6.2.0",
     "@vercel/analytics": "^0.1.11",
     "memory-cache": "^0.2.0",
-    "next": "12.2.5",
+    "next": "14.2.35",
     "node-ts-cache-storage-memory": "^4.4.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
